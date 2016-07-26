@@ -6,6 +6,7 @@
 import {createStore,combineReducers} from 'redux';
 //创建reducer
 let reducer1 = (state={},action)=>{
+	debugger;
     switch (action.type){
         case 'hello':
             return Object.assign({},state,action)
@@ -14,6 +15,7 @@ let reducer1 = (state={},action)=>{
     }
 };
 let reducer2 = (state={},action)=>{
+	debugger;
     switch (action.type){
         case 'test':
             return Object.assign({},state,action)
@@ -25,6 +27,7 @@ let finalReducers = combineReducers({
 	reducer1,
 	reducer2
 });
+debugger
 //创建store
 let store = createStore(finalReducers,{});
 //创建action
